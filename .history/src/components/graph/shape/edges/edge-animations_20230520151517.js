@@ -116,29 +116,30 @@ const dash = {
 
 
 const growth = {
-  run(group) {
+  run (group) {
+    // let index = 0;
+    // 获得当前边的第1个图形，这里是边本身的 path
     const path = group.get('children')[0];
-    const length = path.getTotalLength();
-    const startPoint = path.getPoint(0);
+    const length = group.getTotalLength();
     const growthLine = group.addShape('path', {
       attrs: {
+        // offset:     path.attrs.offset,
         path:       path.attrs.path,
         stroke:     '#E33131',
         startArrow: false,
-        endArrow:   false,
+        endArrow:   false,        
       },
       name: 'edge-growth',
     });
 
-    growthLine.attr('lineDash', [length, length]);
-    growthLine.attr('lineDashOffset', length);
-
     growthLine.animate(
       ratio => {
-        const offset = length - length * ratio;
-        return {
-          lineDashOffset: offset,
+        const startLen = ratio * length;
+        const cfg = {
+            lineDash: [startLen, length - startLen],
         };
+
+        return cfg;   
       },
       {
         repeat:   true,
@@ -146,7 +147,8 @@ const growth = {
       },
     );
   },
-  stop(group) {
+  stop (group) {
+    // 获得当前边的第1个图形，这里是边本身的 path
     const path = group.get('children').find(item => item.cfg.name === 'edge-growth');
 
     if (path) {
@@ -161,4 +163,3 @@ export default {
   dash,
   growth,
 };
-

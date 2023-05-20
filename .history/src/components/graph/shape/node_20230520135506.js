@@ -211,7 +211,9 @@ export default G6 => {
         height: cfg.style.height || 40,   
         x:      -cfg.style.width / 2 ,
         y:      -cfg.style.height / 2,
-        img:    imageUrl,     
+        img:    imageUrl,    
+        filll:  'white',
+        stroke: 'black',     
       }, cfg);
     },
     addLabel(cfg) { },

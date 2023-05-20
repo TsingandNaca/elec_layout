@@ -258,12 +258,12 @@ export default {
         defaultEdge: {
           type:  'polyline-edge', // 扩展了内置边, 有边的事件
           style: {
-            radius:          20,
-            offset:          5,
-            stroke:          '#aab7d3',
-            lineAppendWidth: 60, // 防止线太细没法点中
+            radius:          5,
+            offset:          15,
+            stroke:          '#aab7c3',
+            lineAppendWidth: 35, // 防止线太细没法点中
             endArrow:        false,
-            zIndex:          10,
+            // zIndex:          10,
           },
         },
         // 覆盖全局样式
@@ -281,7 +281,6 @@ export default {
         // 默认边不同状态下的样式集合
         edgeStateStyles: {
           'edgeState:default': {
-            animationType: 'dash',
             stroke: '#aab7c3',
           },
           'edgeState:selected': {
@@ -289,7 +288,7 @@ export default {
           },
           'edgeState:hover': {
             animate:       true,
-            animationType: 'growth',
+            animationType: 'dash',
             stroke:        '#1890FF',
           },
         },
@@ -310,35 +309,6 @@ export default {
       // this.graph.fitView();
     }, // end of create graphics
     // 初始化图事件
-
-    connectNodes(node) {
-        // 定义节点之间的连接信息，包括源节点、目标节点和锚点索引
-        const connectionList = [
-          {  target: '1001', sourceAnchor: 0, targetAnchor: 1 },
-          {  target: '2001', sourceAnchor: 0, targetAnchor: 2 },
-          // 可以继续添加更多连接信息
-        ];
-
-        // 获取放入节点的相关信息
-        const source = node.get('id');
-        // 遍历连接信息列表，创建连线
-        connectionList.forEach(connection => {
-          const {target, sourceAnchor, targetAnchor} = connection;
-          const targetNode = this.graph.findById(target);
-          if (targetNode) {
-            this.graph.addItem('edge', {
-              id: `${+new Date() + (Math.random() * 10000).toFixed(0)}`,
-              source,
-              target,
-              sourceAnchor,
-              targetAnchor,
-              /* 其他边的属性 */
-            });
-          }
-        });
-      },
-
-
     initGraphEvent () {
       this.graph.on('drop', e => {
         const { originalEvent } = e;
@@ -347,8 +317,7 @@ export default {
           const transferData = originalEvent.dataTransfer.getData('dragComponent');
 
           if(transferData) {
-            const node = this.addNode(transferData, e);
-            this.connectNodes(node); 
+            this.addNode(transferData, e);
           }
         }
       });
@@ -514,9 +483,7 @@ export default {
         y,
       };
 
-      const node = this.graph.addItem('node', model);
-      
-      return node;
+      this.graph.addItem('node', model);
     },
     save() {
       // eslint-disable-next-line no-alert

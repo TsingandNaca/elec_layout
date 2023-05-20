@@ -159,228 +159,228 @@ export default {
     //     [0.45, 0.2],
     //   ],
     // },
-    // {
-    //   id:    '2',
-    //   type:  'circle-node',
-    //   style: {
-    //     r:         50,
-    //     width:     230,
-    //     height:    60,
-    //     fill:      '#65b586',
-    //     lineWidth: 0,
-    //   },
-    //   x:        500,
-    //   y:        300,
-    //   label:    '初始化\n事件和生命周期',
-    //   labelCfg: {
-    //     style: {
-    //       lineWidth: 2,
-    //       fontSize:  18,
-    //       stroke:    '#ccc',
-    //       fill:      '#fff',
-    //       textAlign: 'center',
-    //     },
-    //   },
-    //   anchorPoints: [
-    //     [0, 0],
-    //     [0.5, 0],
-    //     [0, 1],
-    //     [0.5, 1],
-    //     [1, 0],
-    //     [1, 1],
-    //     [0.5, 0.5],
-    //     [0.45, 0.2],
-    //   ],
-    // },
-    // {
-    //   id:    '3',
-    //   type:  'rect-node',
-    //   style: {
-    //     fill:      '#fff',
-    //     stroke:    '#c96164',
-    //     lineWidth: 3,
-    //     width:     180,
-    //     height:    60,
-    //   },
-    //   x:        250,
-    //   y:        170,
-    //   label:    'beforeCreate',
-    //   labelCfg: {
-    //       style: {
-    //       fill:       '#c96164',
-    //       fontSize:   20,
-    //       fontWeight: '700',
-    //       width:      200,
-    //       height:     60,
-    //     },
-    //   },
-    //   anchorHotsoptStyles: {
-    //     r:    11,
-    //     fill: 'green',
-    //   },
-    //   anchorPointStyles: {
-    //     r:         4,
-    //     fill:      '#fff',
-    //     stroke:    '#1890FF',
-    //     lineWidth: 2,
-    //   },
-    // },
-    // {
-    //   id:    '4',
-    //   x:     500,
-    //   y:     450,
-    //   type:  'rect-node',
-    //   label: '初始化\n注入 & 校验',
-    //   // direction: 'down',
-    //   style: {
-    //     fill:      '#65b586',
-    //     size:      [100, 160],
-    //     lineWidth: 0,
-    //     width:     200,
-    //     height:    60,
-    //   },
-    //   labelCfg: {
-    //      style: {
-    //       fontSize:  12,
-    //       fill:      '#fff',
-    //       stroke:    '#65b586',
-    //       textAlign: 'left',
-    //       x:         -30,
-    //       y:         0,
-    //       position:  'bottom',
-    //     },
-    //   },
-    //   /* anchorPoints: [
-    //     [1, 0],
-    //     [0, 0],
-    //     [0.5, 1],
-    //   ], */
-    // },
-    // {
-    //   id:    '5',
-    //   x:     250,
-    //   y:     320,
-    //   label: 'created',
-    //   type:  'rect-node',
-    //   style: {
-    //     fill:      '#fff',
-    //     stroke:    '#c96164',
-    //     lineWidth: 3,
-    //     width:     180,
-    //     height:    60,
-    //   },
-    //   labelCfg: {
-    //     style: {
-    //       fontSize: 20,
-    //       fill:     '#c96164',
-    //     },
-    //   },
-    // },
-    // {
-    //   id:    '6',
-    //   x:     500,
-    //   y:     600,
-    //   type:  'diamond-node',
-    //   label: '是否指定 "el" 选项?',
-    //   style: {
-    //     size:   [160, 100],
-    //     fill:   '#f1b953',
-    //     stroke: '#f1b953',
-    //   },
-    //   labelCfg: {
-    //     style: {
-    //       fontSize: 14,
-    //       fill:     '#fff',
-    //       stroke:   '#fff',
-    //     },
-    //   },
-    // },
-    // {
-    //   id:    '7',
-    //   x:     750,
-    //   y:     600,
-    //   label: '当调用\n vm.$mount(el)\n 函数时',
-    //   style: {
-    //     fill:      '#65b586',
-    //     size:      [160, 200],
-    //     lineWidth: 0,
-    //   },
-    //   labelCfg: {
-    //     style: {
-    //       fill:      '#fff',
-    //       stroke:    '#65b586',
-    //       fontSize:  12,
-    //       textAlign: 'left',
-    //       x:         -40,
-    //       y:         -30,
-    //     },
-    //   },
-    //   type: 'triangle-node',
-    // },
-    // {
-    //   x:        500,
-    //   y:        800,
-    //   id:       '8',
-    //   label:    '是否指定 "template" 选项',
-    //   labelCfg: {
-    //     style: {
-    //       fontSize: 12,
-    //     },
-    //   },
-    //   style: {
-    //     rx: 100,
-    //     ry: 30,
-    //   },
-    //   type: 'ellipse-node',
-    // },
-    // {
-    //   id:       '9',
-    //   x:        250,
-    //   y:        800,
-    //   label:    '将 template 编译\n到 render 函数中',
-    //   labelCfg: {        
-    //     style: {
-    //       fontSize: 12,          
-    //     },
-    //   },
-    //   style: {
-    //     width:  160,
-    //     height: 60,
-    //   },
-    // },
-    // {
-    //   id:       '10',
-    //   x:        750,
-    //   y:        800,
-    //   label:    '将 el 外部的 HTML\n作为 template 编译',
-    //   labelCfg: {
-    //     style: {
-    //       fontSize: 12,
-    //     },
-    //   },
-    //   style: {
-    //     width:  160,
-    //     height: 60,
-    //   },
-    // },
-    // {
-    //   id:       '11',
-    //   x:        500,
-    //   y:        1000,
-    //   label:    '结束',
-    //   labelCfg: {
-    //     style: {
-    //       fontSize: 16,
-    //       fill:     '#fff',
-    //     },
-    //   },
-    //   style: {
-    //     width:     160,
-    //     height:    60,
-    //     fill:      '#fdbc33',
-    //     lineWidth: 0,
-    //   },
-    // },
+    {
+      id:    '2',
+      type:  'circle-node',
+      style: {
+        r:         50,
+        width:     230,
+        height:    60,
+        fill:      '#65b586',
+        lineWidth: 0,
+      },
+      x:        500,
+      y:        300,
+      label:    '初始化\n事件和生命周期',
+      labelCfg: {
+        style: {
+          lineWidth: 2,
+          fontSize:  18,
+          stroke:    '#ccc',
+          fill:      '#fff',
+          textAlign: 'center',
+        },
+      },
+      anchorPoints: [
+        [0, 0],
+        [0.5, 0],
+        [0, 1],
+        [0.5, 1],
+        [1, 0],
+        [1, 1],
+        [0.5, 0.5],
+        [0.45, 0.2],
+      ],
+    },
+    {
+      id:    '3',
+      type:  'rect-node',
+      style: {
+        fill:      '#fff',
+        stroke:    '#c96164',
+        lineWidth: 3,
+        width:     180,
+        height:    60,
+      },
+      x:        250,
+      y:        170,
+      label:    'beforeCreate',
+      labelCfg: {
+          style: {
+          fill:       '#c96164',
+          fontSize:   20,
+          fontWeight: '700',
+          width:      200,
+          height:     60,
+        },
+      },
+      anchorHotsoptStyles: {
+        r:    11,
+        fill: 'green',
+      },
+      anchorPointStyles: {
+        r:         4,
+        fill:      '#fff',
+        stroke:    '#1890FF',
+        lineWidth: 2,
+      },
+    },
+    {
+      id:    '4',
+      x:     500,
+      y:     450,
+      type:  'rect-node',
+      label: '初始化\n注入 & 校验',
+      // direction: 'down',
+      style: {
+        fill:      '#65b586',
+        size:      [100, 160],
+        lineWidth: 0,
+        width:     200,
+        height:    60,
+      },
+      labelCfg: {
+         style: {
+          fontSize:  12,
+          fill:      '#fff',
+          stroke:    '#65b586',
+          textAlign: 'left',
+          x:         -30,
+          y:         0,
+          position:  'bottom',
+        },
+      },
+      /* anchorPoints: [
+        [1, 0],
+        [0, 0],
+        [0.5, 1],
+      ], */
+    },
+    {
+      id:    '5',
+      x:     250,
+      y:     320,
+      label: 'created',
+      type:  'rect-node',
+      style: {
+        fill:      '#fff',
+        stroke:    '#c96164',
+        lineWidth: 3,
+        width:     180,
+        height:    60,
+      },
+      labelCfg: {
+        style: {
+          fontSize: 20,
+          fill:     '#c96164',
+        },
+      },
+    },
+    {
+      id:    '6',
+      x:     500,
+      y:     600,
+      type:  'diamond-node',
+      label: '是否指定 "el" 选项?',
+      style: {
+        size:   [160, 100],
+        fill:   '#f1b953',
+        stroke: '#f1b953',
+      },
+      labelCfg: {
+        style: {
+          fontSize: 14,
+          fill:     '#fff',
+          stroke:   '#fff',
+        },
+      },
+    },
+    {
+      id:    '7',
+      x:     750,
+      y:     600,
+      label: '当调用\n vm.$mount(el)\n 函数时',
+      style: {
+        fill:      '#65b586',
+        size:      [160, 200],
+        lineWidth: 0,
+      },
+      labelCfg: {
+        style: {
+          fill:      '#fff',
+          stroke:    '#65b586',
+          fontSize:  12,
+          textAlign: 'left',
+          x:         -40,
+          y:         -30,
+        },
+      },
+      type: 'triangle-node',
+    },
+    {
+      x:        500,
+      y:        800,
+      id:       '8',
+      label:    '是否指定 "template" 选项',
+      labelCfg: {
+        style: {
+          fontSize: 12,
+        },
+      },
+      style: {
+        rx: 100,
+        ry: 30,
+      },
+      type: 'ellipse-node',
+    },
+    {
+      id:       '9',
+      x:        250,
+      y:        800,
+      label:    '将 template 编译\n到 render 函数中',
+      labelCfg: {        
+        style: {
+          fontSize: 12,          
+        },
+      },
+      style: {
+        width:  160,
+        height: 60,
+      },
+    },
+    {
+      id:       '10',
+      x:        750,
+      y:        800,
+      label:    '将 el 外部的 HTML\n作为 template 编译',
+      labelCfg: {
+        style: {
+          fontSize: 12,
+        },
+      },
+      style: {
+        width:  160,
+        height: 60,
+      },
+    },
+    {
+      id:       '11',
+      x:        500,
+      y:        1000,
+      label:    '结束',
+      labelCfg: {
+        style: {
+          fontSize: 16,
+          fill:     '#fff',
+        },
+      },
+      style: {
+        width:     160,
+        height:    60,
+        fill:      '#fdbc33',
+        lineWidth: 0,
+      },
+    },
   ],
   
   edges: [

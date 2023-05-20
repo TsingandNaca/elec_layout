@@ -281,7 +281,7 @@ export default {
         // 默认边不同状态下的样式集合
         edgeStateStyles: {
           'edgeState:default': {
-            animationType: 'dash',
+            animationType: 'ball',
             stroke: '#aab7c3',
           },
           'edgeState:selected': {
@@ -289,7 +289,7 @@ export default {
           },
           'edgeState:hover': {
             animate:       true,
-            animationType: 'growth',
+            animationType: 'dash',
             stroke:        '#1890FF',
           },
         },

@@ -289,7 +289,7 @@ export default {
           },
           'edgeState:hover': {
             animate:       true,
-            animationType: 'growth',
+            animationType: 'dash',
             stroke:        '#1890FF',
           },
         },

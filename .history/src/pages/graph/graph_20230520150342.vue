@@ -281,7 +281,6 @@ export default {
         // 默认边不同状态下的样式集合
         edgeStateStyles: {
           'edgeState:default': {
-            animationType: 'dash',
             stroke: '#aab7c3',
           },
           'edgeState:selected': {
@@ -289,7 +288,7 @@ export default {
           },
           'edgeState:hover': {
             animate:       true,
-            animationType: 'growth',
+            animationType: 'dash',
             stroke:        '#1890FF',
           },
         },
@@ -320,20 +319,24 @@ export default {
         ];
 
         // 获取放入节点的相关信息
-        const source = node.get('id');
+        const nodeId = node.get('id');
+        const sourceAnchor = node.getAnchorPoints()[0]; // 假设起始锚点为第一个
+
         // 遍历连接信息列表，创建连线
         connectionList.forEach(connection => {
-          const {target, sourceAnchor, targetAnchor} = connection;
-          const targetNode = this.graph.findById(target);
-          if (targetNode) {
-            this.graph.addItem('edge', {
-              id: `${+new Date() + (Math.random() * 10000).toFixed(0)}`,
-              source,
-              target,
-              sourceAnchor,
-              targetAnchor,
-              /* 其他边的属性 */
-            });
+          const { source, target, sourceAnchor, targetAnchor } = connection;
+          if (source === nodeId) {
+            const targetNode = this.graph.findById(target);
+            if (targetNode) {
+              this.graph.addItem('edge', {
+                id: `${+new Date() + (Math.random() * 10000).toFixed(0)}`,
+                source,
+                target,
+                sourceAnchor,
+                targetAnchor,
+                /* 其他边的属性 */
+              });
+            }
           }
         });
       },

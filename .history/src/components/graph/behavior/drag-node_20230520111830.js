@@ -277,7 +277,7 @@ export default G6 => {
       const pathAttrs = group.getFirst();
       const { width, height, centerX, centerY } = item.getBBox();
       const shadowNode = pathAttrs.cfg.xShapeNode
-        ? group.$getItem('-node')
+        ? group.$getItem('shadow-node')
         : null;
       const shapes = item.get('shapeFactory')[item.get('currentShape')];
       const { shapeType } = shapes || {};
