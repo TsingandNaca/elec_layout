@@ -16,8 +16,12 @@ const router = new VueRouter({
       component: () => import('../pages/tree/tree.vue'),
     },
     {
-      path:      '*',
+      path:      '/graph',
       component: () => import('../pages/graph/graph.vue'),
+    },
+    {
+      path:      '*',
+      component: () => import('../pages/music-coach.vue'),
     },
   ],
 });
